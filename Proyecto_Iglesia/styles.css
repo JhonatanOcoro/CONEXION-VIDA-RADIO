@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*MENU*/
+nav{
+    background: yellow;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: black;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #fff;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media(max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: blanchedalmond;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a.hover, li a.active{
+        background: none;
+        color: blue;
+    }
+    #check:checked ~ul{
+        left: 0;
+    }
+}
+
+
+
+#noticias{
+    background: beige;
+    color: black;
+    border-radius: 40%;
+    padding: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    
+}
+#entrevistas{
+    background: beige;
+    color: black;
+    border-radius: 40%;
+    padding: 100px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+#lanzamientos{
+    background: beige;
+    color: black;
+    border-radius: 40%;
+    padding: 100px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+p{
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+}
+footer{
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    border-top: solid #fff 1px ;
+}
