@@ -1,125 +1,158 @@
 *{
     padding: 0;
     margin: 0;
-    text-decoration: none;
-    list-style: none;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
-    background: black;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 }
-/*MENU*/
-nav{
-    background: yellow;
-    height: 80px;
+header .brand img{
+    height: 100px;
+}
+.section-main{
+    position: ralative;
     width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to left, rgba(90, 155, 176, 0.8), rgba(0,0,0,.1)), url(./imagenes/Fondo.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 80px;
 }
-.enlace{
-    position: absolute;
-    padding: 20px 50px;
-}
-.logo{
-    height: 40px;
-}
-nav ul{
-    float: right;
-    margin-right: 20px;
-}
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-nav ul li a{
-    color: black;
-    font-size: 15px;
-    padding: 7px 13px;
-    border-radius: 5px;
+.section-main h1{
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 60px;
+    font-weight: 800;
     text-transform: uppercase;
-}
-li a.active, li a:hover{
-    background: #fff;
-    transition: .5s;
-}
-.checkbtn{
-    font-size: 30px;
-    color: black;
-    float: right;
+    letter-spacing: 2px;
     line-height: 80px;
-    margin-right: 40px;
+    text-shadow: 0 0 3px #fff, 0 0 3px #000;
+}
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    transition: 0.6;
+}
+header.down{
+    background: #000;
+    padding: 15px 80px;
+}
+header .menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center0;
+}
+header .menu ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .menu ul li{
+    list-style: none;
+}
+header .menu a{
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    transition: 0.5s;
+    transition-property: color, backgraund;
+}
+header .menu a:hover{
+    color: #000;
+    background: #fff;
+}
+.section-two{
+    padding: 20px;
+}
+header .btn{
+    color: #fff;
+    font-size: 25px;
     cursor: pointer;
     display: none;
 }
-#check{
-    display: none;
-}
-@media(max-width: 952px){
-    .enlace{
-        padding-left: 20px;
+@media(max-width: 991px){
+    header, header .down{
+        padding: 20px 40px;
     }
-    nav ul li a{
-        font-size: 16px;
-    }
-}
-@media(max-width: 858px){
-    .checkbtn{
+    header .btn{
         display: block;
     }
-    ul{
+    header .menu{
         position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: blanchedalmond;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
+        background: #000;
+        min-width: 33px;
+        height: 100hv;
+        top: 0;
+        right: -100%;
+        padding: 80px 50px;
+        transition: 0.5s;
+        transition-property: right;
     }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
+    header .menu ul{
+        flex-direction: column;
     }
-    nav ul li a{
-        font-size: 20px;
+    header .menu.active{
+        right: 0;
     }
-    li a.hover, li a.active{
-        background: none;
-        color: blue;
-    }
-    #check:checked ~ul{
+    header .menu .close-btn{
+        position: absolute;
+        top: 0;
         left: 0;
+        margin: 25px;
+    }
+    header .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        padding: 0 15px;
     }
 }
-
+@media(max-width: 600px){
+    .section-main h1{
+        font-size: 50px;
+        line-height: 60px;
+    }
+}
 
 
 #noticias{
     background: beige;
     color: black;
-    border-radius: 40%;
     padding: 100px;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     text-align: center;
     
 }
 #entrevistas{
     background: beige;
     color: black;
-    border-radius: 40%;
     padding: 100px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     text-align: center;
 }
 #lanzamientos{
     background: beige;
     color: black;
-    border-radius: 40%;
     padding: 100px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     text-align: center;
 }
 p{
